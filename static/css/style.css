@@ -25,12 +25,18 @@
 .icon-delete:before { content: "\e61b"; }
 .icon-trophy:before { content: "\e80b"; }
 
+/* 自定义 */
+.company {
+    display: flex;
+    justify-content: space-between;
+}
+
 span {
     display: inline-block;
 }
 
 .label-value{
-    width: 200px;
+    width: 150px;
     vertical-align: top;
 }
 
