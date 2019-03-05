@@ -121,26 +121,24 @@
         <hr /> 
         <ul class="experience-list">
             <li>
-                <h3 >天天学农(小程序, 微站)</h3> 
-                <p>
-                    项目简介: 该项目作为农业领域知识付费平台, 用户通过音视频课程学习提升专业知识
-                </p>
-                <p>项目职责: 负责</p>
+                <h3>天天学农(小程序, 微站)</h3> 
+                <p>项目简介: 该项目作为农业领域知识付费平台, 用户通过音视频课程学习提升专业知识</p>
+                <p>项目职责: 主要负责客户端音视频播放器, 支付功能模块, 以及各版本需求迭代开发工作</p>
                 <div>技术要点:</div>
                 <div>
-                    1.使用vue-cli构建项目，并在created创建实例后执行异步操作, 并在mounted实例挂载后执行DOM操作
+                    1. 使用小程序video组件,并使用createVideoContext创建video对象，通过其bindplay,bindpause等组件属性控制视频播放
                 </div>
                 <div>
-                    2.使用axios实现前后端数据交互, 以及使用promise实现异步数据加载
+                    2. 通过createInnerAudioContext创建audio对象, 并且在app.js中定义全局变量记录播放状态, 实现迷你播放器与课程详情页面数据同步
                 </div>
                 <div>
-                    3.通过props实现父组件向下传递, 以及使用$emit派发事件实现子组件向上传递，实现组件通信
+                    3. 调用wx.requestPayment发起微信支付, 同时封装支付模块, 以供多形态产品复用，利用小程序弱网机制, 优化网络请求异常场景。
                 </div>
                 <div>
-                    4.使用computed计算属性处理复杂逻辑，以及使用methods实现事件处理
+                    4. 使用button组件的open-type微信开放能力获取用户信息以及手机号实现用户登录注册, 注册信息经AES加密，
                 </div>
                 <div>
-                    5.利用浏览器缓存，图片压缩，以及vue-lazy-load实现图片懒加载等方式优化用户体验
+                    5. 结合小程序提供wx.request方法结合Promise分装Ajax请求方法, 统一处理网络请求返回状态, 以及依据接口所需带上如token等参数
                 </div>
             </li> 
             <li>
