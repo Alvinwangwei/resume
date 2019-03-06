@@ -11,7 +11,7 @@
  </head> 
 <body style="padding-right: 0px;"> 
     <div class="container" id="cv"> 
-        <div class="side" style="height: 1880px"> 
+        <div class="side"> 
         <div class="me"> 
             <div class="portrait" style="background-image: url(&quot;https://www.lgstatic.com/i/image2/M00/45/FF/CgoB5lrTh_aAC3L4AAM64wseQ5w795.jpg&quot;); background-size: contain; background-repeat: no-repeat;"></div> 
             <h1 id="username" >王伟</h1> 
@@ -85,155 +85,153 @@
                     <i class="iconfont icon-work"></i> 
                     <span class="info-title" >工作经历</span>
                 </h2> 
-            <hr /> 
-            <ul class="experience-list"> 
+                <hr /> 
+                <ul class="experience-list"> 
+                    <li>
+                        <h3 class="company">
+                            <div class="name">深圳市天天学农网络科技有限公司</div>
+                            <div class="duration">2018.5 - 至今</div>
+                        </h3> 
+                        <p>web前端开发工程师</p>
+                        <p>前端组小程序端主开发, 前期同时参与基于微信端H5开发</p>
+                    </li>
+                    <li>
+                        <h3 class="company">
+                            <div class="name">深圳市啊哈娱乐科技有限公司</div>
+                            <div class="duration">2017.9 - 2018.5</div>
+                        </h3> 
+                        <p>前端开发工程师</p>
+                        <p>参与ahaa移动端, 官网开发工作</p>
+                    </li>
+                    <li>
+                        <h3 class="company">
+                            <div class="name">深圳市华信智能科技有限公司</div>
+                            <div class="duration">2016.8 - 2017.9</div>
+                        </h3>
+                        <p>前端开发工程师</p>
+                        <p>参与PC端的后台管理系统开发</p>
+                    </li> 
+                </ul> 
+            </div> 
+            <div class="project info-unit right-list"> 
+                <h2 class="info-header">
+                    <i class="iconfont icon-project"></i>
+                    <span class="info-title" >项目经验</span>
+                </h2> 
+                <hr /> 
+                <ul class="experience-list">
+                    <li>
+                        <h3>天天学农(小程序, 微站)</h3>
+                        <div class="listBox">
+                            <p class="title">项目简介: </p>
+                            <div class="intro">该项目作为农业领域知识付费平台, 用户通过音视频课程学习提升专业知识</div>
+                            <p class="title">项目职责:</p>
+                            <div class="intro">主要负责客户端音视频播放器, 支付功能模块, 以及各版本需求迭代开发工作</div>
+                            <div class="title">技术要点:</div>
+                            <div class="techPoint">
+                                1. 使用小程序video组件,并使用createVideoContext创建video对象，通过其bindplay,bindpause等组件属性控制视频播放
+                            </div>
+                            <div class="techPoint">
+                                2. 通过createInnerAudioContext创建audio对象, 并且在app.js中定义全局变量记录播放状态, 实现迷你播放器与课程详情页面数据同步
+                            </div>
+                            <div class="techPoint">
+                                3. 调用wx.requestPayment发起微信支付, 同时封装支付模块, 以供多形态产品复用，利用小程序弱网机制, 优化网络请求异常场景。
+                            </div>
+                            <div class="techPoint">
+                                4. 使用button组件的open-type微信开放能力获取用户信息以及手机号实现用户登录注册, 注册信息经AES加密
+                            </div>
+                            <div class="techPoint">
+                                5. 结合小程序提供wx.request方法结合Promise分装Ajax请求方法, 统一处理网络请求返回状态, 以及依据接口所需带上如token等参数
+                            </div>
+                        </div>
+                    </li> 
+                    <li>
+                        <h3>ahaa(移动端, PC端官网)</h3> 
+                        <div class="listBox">
+                            <p class="title">项目简介: </p>
+                            <div class="intro">该项目移动端app是一个本地生活体验平台, 主要包括活动, 地点, 故事的分享,用户可在此平台了解有趣的活动或者地点</div>
+                            <p class="title">项目职责: </p>
+                            <div class="intro">参与ahaa移动端, PC端网站的开发工作</div>
+                            <div class="title">技术要点:</div>
+                            <div class="techPoint">
+                                1.移动端页面布局采用rem以及flex布局以及viewport设置, 实现页面自适应, PC端采用Media Querie实现响应式布局
+                            </div>
+                            <div class="techPoint">
+                                2.使用computed以及watch属性监听数据变化, 同时可以利用beforeRouteUpdate路由导航守卫监听路由变化
+                            </div>
+                            <div class="techPoint">
+                                3.通过微信JSSDK中WeixinJSBridge调起微信内支付, 以及调用统一下单接口并设置回调页面实现H5支付，并通过onMenuShareAppMessage等实现微信分享。
+                            </div>
+                            <div class="techPoint">
+                                4.通过props实现父组件向下传递, 以及使用$emit派发事件实现子组件向上传递，实现组件通信; 利用图片压缩，图片上传CDN，以及vue-lazy-load实现图片懒加载等方式优化用户体验
+                            </div>
+                            <div class="techPoint">
+                                5.项目通过webpack进行代码打包压缩, 并且使用git进行协同开发, 版本控制
+                            </div>
+                        </div>
+                    </li> 
+                    <li>
+                        <h3>音乐播放器(WebApp)</h3>
+                        <div class="listBox">
+                            <p class="title">项目简介:</p>
+                            <div class="intro">
+                                该项目是一个个性化的音乐app, 主要模块包含歌曲推荐, 歌手,排行, 搜索四个模块, 为用户提供良好视听体验
+                            </div>
+                            <div class="title">项目职责:</div>
+                            <div class="intro">项目为个人作品,实现前前端页面开发，前后端数据交互</div>
+                            <div class="title lastProjectTitle">技术要点:</div>
+                            <div class="techPoint">
+                                1.使用better-scroll实现首页banner, 和列表上拉加载, 下拉刷新, 以及使用transition实现页面动画,使用fastclick解决手机点击事件延迟
+                            </div>
+                            <div class="techPoint">
+                                2.使用vuex状态管理工具实现组件与数据抽离, 并管理多组件共享状态
+                            </div>
+                            <div class="techPoint">
+                                3.使用钩子函数实现数据监听, 渲染页面，页面节点的实例化功能
+                            </div>
+                            <div class="techPoint">
+                                4.设置node后台允许跨域, 允许前端任何方式的跨域请求, 以及通过jsonp实现跨域
+                            </div>
+                            <div class="techPoint">
+                                5.使用stylus预处理框架进行css代码编写
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="trophy info-unit"> 
+                <h2 class="info-header">
+                    <i class="iconfont icon-trophy"></i> 
+                    <span class="info-title" >专业技能</span>
+                </h2> 
+                <hr /> 
+                <ul class="experience-list"> 
+                    <li> 
+                        <h3 >熟练掌握html5、css3，并开发符合W3C标准和规范的移动端、PC端页面，熟悉web语意化</h3> 
+                    </li> 
                 <li>
-                    <h3 class="company">
-                        <div class="name">深圳市天天学农网络科技有限公司</div>
-                        <div class="duration">2018.5 - 至今</div>
-                    </h3> 
-                    <p>web前端开发工程师</p>
-                    <p>前端组小程序端主开发, 前期同时参与基于微信端H5开发</p>
-                </li>
-                <li>
-                    <h3 class="company">
-                        <div class="name">深圳市啊哈娱乐科技有限公司</div>
-                        <div class="duration">2017.9 - 2018.5</div>
-                    </h3> 
-                    <p>前端开发工程师</p>
-                    <p>参与ahaa移动端, 官网开发工作</p>
-                </li>
-                <li>
-                    <h3 class="company">
-                        <div class="name">深圳市华信智能科技有限公司</div>
-                        <div class="duration">2016.8 - 2017.9</div>
-                    </h3>
-                    <p>前端开发工程师</p>
-                    <p>参与PC端的后台管理系统开发</p>
+                    <h3 >熟悉css盒模型, 理解浏览器渲染原理，熟练rem，百分比布局，flex布局，以及bootstrap实现响应式布局，有效解决移动端不同分辨率的适配问题</h3> 
                 </li> 
-            </ul> 
-        </div> 
-        <div class="project info-unit right-list"> 
-        <h2 class="info-header">
-            <i class="iconfont icon-project"></i>
-            <span class="info-title" >项目经验</span>
-        </h2> 
-        <hr /> 
-        <ul class="experience-list">
-            <li>
-                <h3>天天学农(小程序, 微站)</h3> 
-                <p>项目简介: 该项目作为农业领域知识付费平台, 用户通过音视频课程学习提升专业知识</p>
-                <p>项目职责: 主要负责客户端音视频播放器, 支付功能模块, 以及各版本需求迭代开发工作</p>
-                <div>技术要点:</div>
-                <div>
-                    1. 使用小程序video组件,并使用createVideoContext创建video对象，通过其bindplay,bindpause等组件属性控制视频播放
-                </div>
-                <div>
-                    2. 通过createInnerAudioContext创建audio对象, 并且在app.js中定义全局变量记录播放状态, 实现迷你播放器与课程详情页面数据同步
-                </div>
-                <div>
-                    3. 调用wx.requestPayment发起微信支付, 同时封装支付模块, 以供多形态产品复用，利用小程序弱网机制, 优化网络请求异常场景。
-                </div>
-                <div>
-                    4. 使用button组件的open-type微信开放能力获取用户信息以及手机号实现用户登录注册, 注册信息经AES加密，
-                </div>
-                <div>
-                    5. 结合小程序提供wx.request方法结合Promise分装Ajax请求方法, 统一处理网络请求返回状态, 以及依据接口所需带上如token等参数
-                </div>
-            </li> 
-            <li>
-                <h3 >ahaa(移动端app, PC端官网)</h3> 
-                <p >
-                    项目简介: 该项目移动端app是一个本地生活体验平台, 主要包括活动, 地点, 故事的分享,用户可在此平台了解有趣的活动或者地点, 并结合线下活动组建社区. PC端网站作为宣传公司的媒介，并引导用户使用app
-                </p>
-                <p>项目职责: 参与ahaa移动端, 网站的开发工作, 根据项目的需求按时完成工作交付</p>
-                <div>技术要点:</div>
-                <div>
-                    1.使用vue-cli构建项目，并在created创建实例后执行异步操作, 并在mounted实例挂载后执行DOM操作
-                </div>
-                <div>
-                    2.使用axios实现前后端数据交互, 以及使用promise实现异步数据加载
-                </div>
-                <div>
-                    3.通过props实现父组件向下传递, 以及使用$emit派发事件实现子组件向上传递，实现组件通信
-                </div>
-                <div>
-                    4.使用computed计算属性处理复杂逻辑，以及使用methods实现事件处理
-                </div>
-                <div>
-                    5.利用浏览器缓存，图片压缩，以及vue-lazy-load实现图片懒加载等方式优化用户体验
-                </div>
-            </li> 
-            <li> 
-                <h3 >智慧充值app</h3> 
-                <p >
-                    项目简介: 该项目面向校园学生用户,为学生提供校园卡的线上充值,线下写卡服务,解决了预付卡充值难的问题
-                </p>
-                <div>
-                    项目职责: 负责项目的页面开发和页面交互效果, 协助后端的功能实现
-                </div>
-                <div>
-                    技术要点: 
-                </div> 
-                <div>
-                    1.页面布局采用rem以及flex布局以及viewport设置等技术, 实现页面自适应
-                </div>
-                <div>
-                    2.运用angualar + ionic开发构建接近原生体验的应用, 使用UI-Router控制界面UI的渲染，以及使用service()服务和$http()服务实现前后端数据对接
-                </div>
-                <div>
-                    3.使用localStorage和sessionStorage实现数据本地存储, 并使用session保存用户的专用数据
-                </div>
-                <div>
-                    4.使用fastclick解决手机点击事件延迟, 使用iScroll解决fixed定位滚动问题
-                </div>
-                <div>
-                    5.使用webpack进行代码打包压缩, 并且使用git进行协同开发, 版本控制
-                </div>
-            </li> 
-            <li>
-                <h3>音乐播放器(WebApp)</h3>
-                <p>
-                    项目简介:该项目是一个个性化的音乐app, 主要模块包含歌曲推荐, 歌手,排行, 搜索四个模块, 为用户提供良好视听体验
-                </p>
-                <div>
-                    项目职责:项目为个人作品,实现前前端页面开发，前后端数据交互
-                </div>
-                <div>
-                    技术要点:
-                </div>
-                <div>
-                    1.使用vue框架, 以及vue-router构建单页面应用
-                </div>
-                <div>
-                    2.使用better-scroll实现首页banner, 和列表上拉加载, 下拉刷新, 以及使用transition实现页面动画
-                </div>
-                <div>
-                    3.使用钩子函数实现数据监听, 渲染页面，页面节点的实例化功能
-                </div>
-                <div>
-                    4.使用vuex状态管理工具实现组件与数据抽离, 并管理多组件共享状态
-                </div>
-                <div>
-                    5.使用stylus预处理框架进行代码编写
-                </div>
-            </li>
-        </ul> 
-        </div> 
-        <div class="trophy info-unit"> 
-            <h2 class="info-header"><i class="iconfont icon-trophy"></i> <span class="info-title" >专业技能</span><span class="item-add" style="visibility: hidden;"><i class="iconfont icon-playlistadd"></i></span><span class="unit-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></h2> 
-            <hr /> 
-            <ul class="experience-list"> 
-            <li> <h3 >熟练掌握html5、css3，并开发符合W3C标准和规范的移动端、PC端页面，熟悉web语意化</h3> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <h3 >熟悉css盒模型, 理解浏览器渲染原理，熟练rem，百分比布局，flex布局，以及bootstrap实现响应式布局，有效解决移动端不同分辨率的适配问题</h3> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <h3 >熟练掌握JavaScript, ajax, jsonp等前端技术，熟练掌握面向对象的编程思想，以及熟练使用ES6的语法和新特性</h3> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <h3 >熟悉HTTP协议, 如URI Cache Session Cookie Request Response</h3> <span class="item-remove"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <h3 >熟练使用jQuery Zepto, Vue，AngularJS等常用的js框架类库,以及熟悉Echarts、canvas等数据可视化工具</h3> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <h3 >熟练使用ElementUI, Bootstrap等UI库</h3> <span class="item-remove"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <h3 >熟悉git, webpack等自动化构建工具, 以及使用stylus等CSS的预处理框架</h3> <span class="item-remove"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <h3 >使用过百度地图,Mapbox等地图api,且会使用photoshop和sketch切图</h3> <span class="item-remove"><i class="iconfont icon-delete"></i></span></li> 
-            </ul> 
-        </div> 
+                <li> 
+                    <h3 >熟练掌握JavaScript, ajax, jsonp等前端技术，熟练掌握面向对象的编程思想，以及熟练使用ES6的语法和新特性</h3> 
+                </li> 
+                <li> 
+                    <h3 >熟悉HTTP协议, 如URI Cache Session Cookie Request Response</h3>
+                </li> 
+                <li> 
+                    <h3 >
+                        熟练开发微信小程序, 以及使用Vue等常用的js框架类库,熟悉Echarts、canvas等数据可视化工具
+                    </h3> 
+                </li> 
+                <li> 
+                    <h3 >熟练使用ElementUI, Bootstrap等UI库</h3> 
+                </li> 
+                <li> 
+                    <h3 >熟悉git, webpack等自动化构建工具, 以及使用stylus等CSS的预处理框架</h3> 
+                </li> 
+                </ul> 
+            </div>
+        </div>
     </div> 
 </body>
 </html
