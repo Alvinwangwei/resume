@@ -40,11 +40,23 @@
     font-weight: 700;
 }
 .lastProjectTitle {
-    padding-top: 40px;
+    padding-top: 52px;
+}
+.ahaalist {
+    margin-top: -8px;
+}
+.mainTitle {
+    margin-top: -10px;
+}
+.techPointTitle {
+    padding-top: 8px;
 }
 .school {
     display: flex;
     justify-content: space-between;
+}
+.duty {
+    padding-top: 8px;
 }
 
 span {

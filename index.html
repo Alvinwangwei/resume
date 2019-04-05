@@ -21,9 +21,22 @@
             <h2 class="info-header"> <i class="iconfont icon-person"></i> <span class="info-title" >基本信息</span> </h2> 
             <hr /> 
             <ul class="info-list"> 
-            <li><label class="left-label" >姓名</label><span class="label-value" >王伟</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
-            <li><label class="left-label" >学历</label><span class="label-value" >本科</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
-            <li><label class="left-label" >毕业院校</label><span class="label-value" >湖南文理学院</span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
+                <li>
+                    <label class="left-label" >姓名</label>
+                    <span class="label-value" >王伟</span>
+                </li> 
+                <li>
+                    <label class="left-label" >性别</label>
+                    <span class="label-value" >男</span>
+                </li> 
+                <li>
+                    <label class="left-label" >年龄</label>
+                    <span class="label-value" >25岁</span>
+                </li> 
+                <li>
+                    <label class="left-label" >学历</label>
+                    <span class="label-value" >本科</span>
+                </li>
             </ul> 
         </div> 
         <div class="contact info-unit"> 
@@ -38,10 +51,21 @@
             <h2 class="info-header"><i class="iconfont icon-star"></i> <span class="info-title" >技能点</span></h2> 
             <hr /> 
             <ul class="progress-list"> 
-            <li> <label class="left-label" >html5 +css3</label> <progress value="70" max="100"></progress> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <label class="left-label" >es6</label> <progress value="65.9375" max="100"></progress> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <label class="left-label" ><span style="display: inline !important;">webpack</span></label> <progress value="60.40625" max="100"></progress> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
-            <li> <label class="left-label" >Ajax</label> <progress value="70" max="100"></progress> <span class="item-remove" style="visibility: hidden;"> <i class="iconfont icon-delete"></i> </span> <span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span><span class="item-remove" style="visibility: hidden;"><i class="iconfont icon-delete"></i></span></li> 
+                <li> 
+                    <label class="left-label" >html5/css3</label>
+                    <progress value="70" max="100"></progress> 
+                </li> 
+                <li> 
+                    <label class="left-label" >ES5/ES6</label>
+                    <progress value="65.9375" max="100"></progress> 
+                </li> 
+                <li>
+                    <label class="left-label" >HTTP1.1</label>
+                    <progress value="65" max="100"></progress> 
+                </li> 
+                <li> 
+                    <label class="left-label" ><span style="display: inline !important;">MVVM</span></label> <progress value="68" max="100"></progress> 
+                </li> 
             </ul> 
         </div> 
         <div class="stack info-unit"> 
@@ -51,16 +75,17 @@
         </h2> 
             <hr /> 
             <ul class="stack-list"> 
-            <li>
-                <label class="left-label" >前端</label>
-                <span class="label-value" >
-                    微信小程序<br />
-                    Vue.js<br />
-                    Stylus <br />
-                    Git<br />
-                    Promise<br />
-                </span>
-            </li> 
+                <li>
+                    <label class="left-label" >前端</label>
+                    <span class="label-value" >
+                        微信小程序<br />
+                        Vue.js<br />
+                        axios<br />
+                        webpack<br />
+                        Stylus <br />
+                        Git<br />
+                    </span>
+                </li> 
             </ul> 
         </div> 
         </div> 
@@ -69,21 +94,18 @@
                 <h2 class="info-header">
                     <i class="iconfont icon-education"></i>
                     <span class="info-title" >教育经历</span>
-                    <span class="item-add" style="visibility: hidden;">
-                        <i class="iconfont icon-playlistadd"></i>
-                    </span>
                 </h2> 
                 <hr /> 
                 <ul class="experience-list"> 
                     <li>
                         <h3 class="school">
                             <div class="name">湖南文理学院 - 网络工程专业（本科)</div>
-                            <div class="duration">2012.9 - 2016.6</div>
+                            <div class="duration">2013.9 - 2017.6</div>
                         </h3>
                     </li> 
                 </ul> 
             </div> 
-            <div class="work info-unit right-list"> 
+            <div class="work info-unit right-list mainTitle"> 
                 <h2 class="info-header">
                     <i class="iconfont icon-work"></i> 
                     <span class="info-title" >工作经历</span>
@@ -96,27 +118,33 @@
                             <div class="duration">2018.5 - 至今</div>
                         </h3> 
                         <p>web前端开发工程师</p>
-                        <p>前端组小程序端主开发, 主导小程序端版本迭代开发, 前期同时参与基于微信端H5开发</p>
+                        <p class="duty">
+                            前端组小程序端主开发, 主导小程序端2.0版本重构以及版本迭代, 通过模块化开发以及方法封装, 提升开发效率和代码可维护性, 负责助力和拼团等运营活动开发, 为产品引流的主要运营手法,  同时负责学农大讲堂报名活动页开发, 目前支撑着所有线下活动报名
+                        </p>
                     </li>
                     <li>
                         <h3 class="company">
                             <div class="name">深圳市啊哈娱乐科技有限公司</div>
-                            <div class="duration">2017.6 - 2018.5</div>
+                            <div class="duration">2017.9 - 2018.5</div>
                         </h3> 
                         <p>前端开发工程师</p>
-                        <p>参与ahaa移动端, 官网开发工作</p>
+                        <p class="duty">
+                            参与移动端H5开发, 负责活动, 地点, 故事模块开发工作, 使用手机淘宝适配方案解决了移动端不同设备自适应, 通过图片优化, js的异步加载等方式优化性能, 同时高度还原设计稿, 注重产品的用户体验
+                        </p>
                     </li>
                     <li>
                         <h3 class="company">
                             <div class="name">深圳市华信智能科技有限公司</div>
-                            <div class="duration">2016.3 - 2017.6</div>
+                            <div class="duration">2017.3 - 2017.9</div>
                         </h3>
-                        <p>前端开发工程师</p>
-                        <p>参与PC端的后台管理系统开发</p>
+                        <p>前端开发实习</p>
+                        <p class="duty">
+                            参与PC端的后台管理系统开发, 根据产品需求按时完成功能开发, 完成与后端的接口联调, 通过项目迅速地提升技能, 不断地对前端代码进行优化
+                        </p>
                     </li> 
                 </ul> 
             </div> 
-            <div class="project info-unit right-list"> 
+            <div class="project info-unit right-list mainTitle"> 
                 <h2 class="info-header">
                     <i class="iconfont icon-project"></i>
                     <span class="info-title" >项目经验</span>
@@ -127,76 +155,75 @@
                         <h3>天天学农(小程序, 微站)</h3>
                         <div class="listBox">
                             <p class="title">项目简介: </p>
-                            <div class="intro">该项目作为农业领域知识付费平台, 用户通过音视频课程学习提升专业知识</div>
-                            <p class="title">项目职责:</p>
-                            <div class="intro">主要负责客户端音视频播放器, 支付功能模块, 以及各版本需求迭代开发工作</div>
-                            <div class="title">技术要点:</div>
+                            <div class="intro">
+                                该项目作为农业领域在线教育平台, 采用原生微信小程序构建, 其中音视频播放器采用小程序video和audio组件实现, 调用wx.requestPayment实现微信支付, 并支持充值虚拟币完成支付.
+                            </div>
+                            <div class="title techPointTitle">技术要点:</div>
                             <div class="techPoint">
-                                1. 使用小程序video组件,并使用createVideoContext创建video对象，通过其bindplay,bindpause等组件属性控制视频播放
+                                1. 整体功能借助JSBridge实现了对底层API接口的调用, 并使用了open-type微信能力、storage离线存储、request网络请求等能力.
                             </div>
                             <div class="techPoint">
-                                2. 通过createInnerAudioContext创建audio对象, 并且在app.js中定义全局变量记录播放状态, 实现迷你播放器与课程详情页面数据同步
+                                2. 使用require/exports方式模块化开发, 通过Object.assign给对象添加方法, 并且使用this指针控制对象属性.
                             </div>
                             <div class="techPoint">
-                                3. 调用wx.requestPayment发起微信支付, 同时封装支付模块, 以供多形态产品复用，利用小程序弱网机制, 优化网络请求异常场景。
+                                3. 通过js节流方法, 维护一个变量状态, 事件响应成功后变量状态置为true方可再次触发, 解决高频调用事件处理函数问题.
                             </div>
                             <div class="techPoint">
-                                4. 使用button组件的open-type微信开放能力获取用户信息以及手机号实现用户登录注册, 注册信息经AES加密
+                                4. 创建Promise对象, 在其构造函数执行wx.request方法, 根据HTTP状态码调用resolve或者reject, 解决异步请求信任问题, 并且实现了异步请求链式写法.
                             </div>
                             <div class="techPoint">
-                                5. 结合小程序提供wx.request方法结合Promise分装Ajax请求方法, 统一处理网络请求返回状态, 以及依据接口所需带上如token等参数
-                            </div>
+                                5. 对于多条件判断, 使用表驱动法从表里面查询信息, 并执行对应逻辑, 而不使用逻辑语句(if或switch), 解决多逻辑判断时的可读性问题.
+                            </div>  
+                            <div class="techPoint">
+                                6. 使用app.js中定义全局变量, 路由参数, 以及本地缓存进行状态管理, 使用小程序弱网机制, 优化网络请求异常场景, 通过用户点击button获取formId发送消息, 使用事件冒泡机制获取多个formId解决消息模版限制.
+                            </div>  
                         </div>
                     </li> 
-                    <li>
+                    <li class="ahaalist">
                         <h3>ahaa(移动端, PC端官网)</h3> 
                         <div class="listBox">
                             <p class="title">项目简介: </p>
-                            <div class="intro">该项目移动端app是一个本地生活体验平台, 主要包括活动, 地点, 故事的分享,用户可在此平台了解有趣的活动或者地点</div>
-                            <p class="title">项目职责: </p>
-                            <div class="intro">参与ahaa移动端, PC端网站的开发工作</div>
-                            <div class="title">技术要点:</div>
+                            <div class="intro">该项目是一个本地生活体验应用, 采用vue框架构建, 移动端自适应采用flexible方案, 轮播图采用vue-awesome-swiper轮播插件, 登录token记录采用本地缓存</div>
+                            <div class="title techPointTitle">技术要点:</div>
                             <div class="techPoint">
-                                1.移动端页面布局采用rem以及flex布局以及viewport设置, 实现页面自适应, PC端采用Media Querie实现响应式布局
+                                1. 通过按需引用vux移动端UI组件库, 组件定义为一个工厂函数, 异步加载组件, 图片压缩、图片上传CDN服务器等方式解决首屏渲染慢的问题.
                             </div>
                             <div class="techPoint">
-                                2.使用computed以及watch属性监听数据变化, 同时可以利用beforeRouteUpdate路由导航守卫监听路由变化
+                                2. 初始化事件created时给data属性添加set和get方法, 实现数据双向绑定, 实例创建后, 通过this.$set给对象添加新属性方式解决对象新属性不触发视图更新问题.
                             </div>
                             <div class="techPoint">
-                                3.通过微信JSSDK中WeixinJSBridge调起微信内支付, 以及调用统一下单接口并设置回调页面实现H5支付，并通过onMenuShareAppMessage等实现微信分享。
+                                3. 采用props和emit方式实现父子组件通信, 采用vuex实现兄弟组件的通信, 采用路由拦截器beforeEach进行登录验证, 用户注册经AES加密后POST请求.
                             </div>
                             <div class="techPoint">
-                                4.通过props实现父组件向下传递, 以及使用$emit派发事件实现子组件向上传递，实现组件通信; 利用图片压缩, 图片上传CDN, 以及vue-lazy-load实现图片懒加载等方式优化用户体验
+                                4.采用vue-lazy-load实现图片懒加载, 通过rem以及flex布局以及viewport设置实现页面自适应, 并且使用git进行协同开发, 版本控制.
                             </div>
                             <div class="techPoint">
-                                5.项目通过webpack进行代码打包压缩, 并且使用git进行协同开发, 版本控制
+                                5.调用微信JSSDK中WeixinJSBridge接口实现微信支付和调用统一下单接口同时设置回调页面实现H5支付,urlencode处理回调页面,回调至支付页进行查单操作解决无法判断支付流程是否成功的问题.
                             </div>
                         </div>
                     </li> 
-                    <li>
+                    <li class="lastProjectTitle">
                         <h3>音乐播放器(WebApp)</h3>
                         <div class="listBox">
                             <p class="title">项目简介:</p>
                             <div class="intro">
-                                该项目是一个个性化的音乐app, 主要模块包含歌曲推荐, 歌手,排行, 搜索四个模块, 为用户提供良好视听体验
+                                该项目是一个个性化的音乐app, 采用vue + element-ui构建, 采用nodejs代理服务端和jsop实现跨域
                             </div>
-                            <div class="title">项目职责:</div>
-                            <div class="intro">项目为个人作品,实现前前端页面开发，前后端数据交互</div>
-                            <div class="title lastProjectTitle">技术要点:</div>
+                            <div class="title techPointTitle">技术要点:</div>
                             <div class="techPoint">
-                                1.使用better-scroll实现首页banner, 和列表上拉加载, 下拉刷新, 以及使用transition实现页面动画,使用fastclick解决手机点击事件延迟
+                                1.在 created 和 mounted 阶段改变绑定到view的数据, 需要等同一事件循环所有数据变化完成, 再统一更新视图, 采用nextTick方法解决视图异步渲染问题
                             </div>
                             <div class="techPoint">
-                                2.使用vuex状态管理工具实现组件与数据抽离, 并管理多组件共享状态
+                                2.采用computed计算属性对多个变量或者对象进行处理, 以及watch属性监控路由、input输入框的值
                             </div>
                             <div class="techPoint">
-                                3.使用钩子函数实现数据监听, 渲染页面，页面节点的实例化功能
+                                3.采用webpack的Loaders和Babel对stylus以及es6等格式文件转化并编译, 通过import实现模块化开发, 并且支持通过npm安装插件.
                             </div>
                             <div class="techPoint">
-                                4.设置node后台允许跨域, 允许前端任何方式的跨域请求, 以及通过jsonp实现跨域
+                                4.移动端双击缩放问题造成点击事件出现300ms延迟, 采用fastclick插件, 通过检测到touchend事件时模拟click事件阻止300ms延迟.
                             </div>
                             <div class="techPoint">
-                                5.使用stylus预处理框架进行css代码编写
+                                5.使用stylus预处理框架进行css代码编写,  并给style标签添加scoped属性实现私有化样式, 解决组件间样式污染问题.
                             </div>
                         </div>
                     </li>
@@ -205,29 +232,30 @@
             <div class="trophy info-unit"> 
                 <h2 class="info-header">
                     <i class="iconfont icon-trophy"></i> 
-                    <span class="info-title" >专业技能</span>
+                    <span class="info-title">专业技能</span>
                 </h2> 
                 <hr /> 
                 <ul class="experience-list"> 
                     <li> 
-                        <h3 >熟练掌握html5、css3，并开发符合W3C标准和规范的移动端、PC端页面，熟悉web语意化</h3> 
+                        <h3 >熟练掌握html5、css3, 理解web语意化、css盒模型、浏览器渲染原理, 优化页面结构</h3> 
                     </li> 
                 <li>
-                    <h3 >熟悉css盒模型, 理解浏览器渲染原理，熟练rem，百分比布局，flex布局，以及bootstrap实现响应式布局，有效解决移动端不同分辨率的适配问题</h3> 
-                </li> 
-                <li> 
-                    <h3 >熟练掌握JavaScript, ajax, jsonp等前端技术，熟练掌握面向对象的编程思想，以及熟练使用ES6的语法和新特性</h3> 
-                </li> 
-                <li> 
-                    <h3 >熟悉HTTP协议, 如URI Cache Session Cookie Request Response</h3>
+                    <h3>熟练使用rem,flex方式实现移动端不同分辨率的适配, bootstrap栅格布局实现PC端响应式布局</h3> 
                 </li> 
                 <li> 
                     <h3 >
-                        熟练开发微信小程序, 以及使用Vue等常用的js框架类库,熟悉Echarts、canvas等数据可视化工具
+                        熟练掌握ajax、canvas、jsonp等前端技术, 理解原型链继承和借用构造函数继承, 熟练使用promise、箭头函数、解构等es6常用特性
                     </h3> 
                 </li> 
                 <li> 
-                    <h3 >熟练使用ElementUI, Bootstrap等UI库</h3> 
+                    <h3 >
+                        理解网络7层协议, 熟悉HTTP请求方法, 请求头以及状态码, 理解TCP建立连接三次握手四次挥手保证可靠传输 
+                    </h3>
+                </li> 
+                <li> 
+                    <h3 >
+                        熟练原生微信小程序开发, 以及熟练使用Vue + Vue-router + Vue + axios 全家桶实现移动端开发
+                    </h3> 
                 </li> 
                 <li> 
                     <h3 >熟悉git, webpack等自动化构建工具, 以及使用stylus等CSS的预处理框架</h3> 
