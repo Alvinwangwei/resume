@@ -9,10 +9,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.0/remodal.min.js"></script> 
   <script src="static/js/script.js"></script> 
  </head> 
-<body style="padding-right: 0px;"> 
-    <div class="container" id="cv"> 
+<body style="padding-right: 0px;">
+    <div class="container" id="cv">
         <div class="side"> 
-        <div class="me"> 
+        <div class="me">
             <div class="portrait" style="background-image: url(&quot;https://www.lgstatic.com/i/image2/M00/45/FF/CgoB5lrTh_aAC3L4AAM64wseQ5w795.jpg&quot;); background-size: contain; background-repeat: no-repeat;"></div> 
             <h1 id="username" >王伟</h1> 
             <h4 id="persona-tag" >web前端开发</h4> 
@@ -114,8 +114,18 @@
                 <ul class="experience-list"> 
                     <li>
                         <h3 class="company">
+                            <div class="name">深圳回收宝科技有限公司</div>
+                            <div class="duration">2019.3 - 至今</div>
+                        </h3>
+                        <p>web开发工程师</p>
+                        <p class="duty">
+                            基础设施开发组BI项目前端开发, 通过在系统中嵌入superset, 可快速生成自定义报表, 将报表以实时日周月的时间维度呈现, 可展现该维度下分时数据以及汇总数据, 并且可把不同时间段的数据进行比较, 通过系统清晰分析出数据趋势
+                        </p>
+                    </li> 
+                    <li>
+                        <h3 class="company">
                             <div class="name">深圳市天天学农网络科技有限公司</div>
-                            <div class="duration">2018.5 - 至今</div>
+                            <div class="duration">2018.5 - 2019.3</div>
                         </h3> 
                         <p>web前端开发工程师</p>
                         <p class="duty">
@@ -125,23 +135,13 @@
                     <li>
                         <h3 class="company">
                             <div class="name">深圳市啊哈娱乐科技有限公司</div>
-                            <div class="duration">2017.9 - 2018.5</div>
+                            <div class="duration">2016.9 - 2018.5</div>
                         </h3> 
                         <p>前端开发工程师</p>
                         <p class="duty">
                             参与移动端H5开发, 负责活动, 地点, 故事模块开发工作, 使用手机淘宝适配方案解决了移动端不同设备自适应, 通过图片优化, js的异步加载等方式优化性能, 同时高度还原设计稿, 注重产品的用户体验
                         </p>
                     </li>
-                    <li>
-                        <h3 class="company">
-                            <div class="name">深圳市华信智能科技有限公司</div>
-                            <div class="duration">2017.3 - 2017.9</div>
-                        </h3>
-                        <p>前端开发实习</p>
-                        <p class="duty">
-                            参与PC端的后台管理系统开发, 根据产品需求按时完成功能开发, 完成与后端的接口联调, 通过项目迅速地提升技能, 不断地对前端代码进行优化
-                        </p>
-                    </li> 
                 </ul> 
             </div> 
             <div class="project info-unit right-list mainTitle"> 
@@ -177,6 +177,25 @@
                             <div class="techPoint">
                                 6. 使用app.js中定义全局变量, 路由参数, 以及本地缓存进行状态管理, 使用小程序弱网机制, 优化网络请求异常场景, 通过用户点击button获取formId发送消息, 使用事件冒泡机制获取多个formId解决消息模版限制.
                             </div>  
+                        </div>
+                    </li> 
+                    <li>
+                        <h3>经营数据分析系统(BI)</h3>
+                        <div class="listBox">
+                            <p class="title">项目简介: </p>
+                            <div class="intro">
+                                该项目为企业提供便捷的经营数据分析, 通过数据上报, 数据清洗等方式提供数据并生成数据报表, 前端通过Echarts,superset和表格等方式实现数据呈现, 并提供数据对比分析。
+                            </div>
+                            <div class="title techPointTitle">技术要点:</div>
+                            <div class="techPoint">
+                                1. 在created时要求登录并获取到用户的权限列表, 动态生成导航栏菜单, 实现系统权限管理.
+                            </div>
+                            <div class="techPoint">
+                                2. 通过JSON.parse和JSON.stringify方法实现对象深拷贝, 在修改对象值时不影响原对象, 使用this.$set方法解决改变对象值Vue不响应式监听问题.
+                            </div>
+                            <div class="techPoint">
+                                3. 使用iframe嵌入superset, 并通过其onload事件监听加载完成, 使用Echarts并通过其init方法初始化, 并通过setOption实现自定义报表.
+                            </div>
                         </div>
                     </li> 
                     <li class="ahaalist">
