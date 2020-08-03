@@ -159,10 +159,19 @@
                             </div>
                             <div class="title techPointTitle">技术要点:</div>
                             <div class="techPoint">
+                              1. 使用webpack的uglifyJsPlugin,mini-css-extract-plugin压缩js,css代码, 配置publicPath使用静态CDN资源路径,使用CommonsChunkPlugin提取公共代码.
                             </div>
                             <div class="techPoint">
+                              2. 定义class类,通过module.exports对外暴露, 外部require js资源即可使用new创建类的实例对象, 调用该类的属性和方法.
                             </div>
                             <div class="techPoint">
+                              3. 自定义组件使用v-model, 绑定响应式数据value, 子组件触发input事件传递数据, 使用vuex实现多组件状态共享.
+                            </div>
+                            <div class="techPoint">
+                              4. 使用async/await+Promise解决执行环境是单线程问题, 异步执行耗时较长任务, 优化任务队列执行顺序
+                            </div>
+                            <div class="techPoint">
+                              5. 动画效果使用requestAnimationFrame把每一帧中的所有DOM操作集中起来,在一次重绘或回流中完成,给动画元素添加position为absolute/fixed避免浏览器回流.
                             </div>
                         </div>
                     </li> 
@@ -171,18 +180,24 @@
                         <div class="listBox">
                             <p class="title">项目简介: </p>
                             <div class="intro">
-                                该项目为企业提供便捷的经营数据分析, 通过数据上报, 数据清洗等方式提供数据并生成数据报表, 前端通过Echarts,superset和表格等方式实现数据呈现, 并提供数据对比分析。
+                                该项目为企业提供便捷的经营数据分析, 通过数据上报, 数据清洗等方式提供数据并生成数据报表, 前端通过Echarts,superset和表格等方式实现数据呈现
                             </div>
                             <div class="title techPointTitle">技术要点:</div>
                             <div class="techPoint">
-                                1. 在created时要求登录并获取到用户的权限列表, 动态生成导航栏菜单, 实现系统权限管理.
+                                1. 使用husky添加git pre-commit钩子, 在执行commit前, 使用lint-staged对暂存区中的文件执行代码检测, 可对src文件使用prettier优化代码格式.
                             </div>
                             <div class="techPoint">
-                                2. 通过JSON.parse和JSON.stringify方法实现对象深拷贝, 在修改对象值时不影响原对象, 使用this.$set方法解决改变对象值Vue不响应式监听问题.
+                                2. 父组件设置provide, 定义reload方法, 同时在router-view上使用v-if控制页面渲染, 在子组件inject注入reload方法, 可直接调用reload方法刷新当前页面.
                             </div>
                             <div class="techPoint">
-                                3. 使用iframe嵌入superset, 并通过其onload事件监听加载完成, 使用Echarts并通过其init方法初始化, 并通过setOption实现自定义报表.
+                                3. 定义v-echarts指令,inserted时获取dom元素,调用Echart.init方法初始化, watch源数据data, 当data改变时调用Echart.setOption实现自定义报表.
                             </div>
+                            <div class="techPoint">
+                                4.接口权限使用jwt的形式, 将缓存在本地的token传入接口验证, 页面权限根据后端返回的路由权限结合本地路由信息计算出menuList, 路由权限可通过Router beforeEach判断是否在权限列表, 重要href参数使用encrypt/decrypt字符串加密.
+                            </div>
+                            <div class="techPoint">
+                                5.通过canvas.getContext创建context对象, 可以使用fillText方法画出用户名, 将canvas转换成image, 并将其作为div背景图生成用户名水印, 保障页面数据安全.
+                           </div>
                         </div>
                     </li> 
                     <li>
@@ -206,7 +221,7 @@
                                 4. 创建Promise对象, 在其构造函数执行wx.request方法, 根据HTTP状态码调用resolve或者reject, 解决异步请求信任问题, 并且实现了异步请求链式写法.
                             </div>
                             <div class="techPoint">
-                                5. 对于多条件判断, 使用表驱动法从表里面查询信息, 并执行对应逻辑, 而不使用逻辑语句(if或switch), 解决多逻辑判断时的可读性问题.
+                                5. 对于多条件判断, 使用对象映射或使用switch/case查找并执行对应逻辑, 避免使用多重if嵌套, 解决多逻辑判断时的可读性问题.
                             </div>  
                             <div class="techPoint">
                                 6. 使用app.js中定义全局变量, 路由参数, 以及本地缓存进行状态管理, 使用小程序弱网机制, 优化网络请求异常场景, 通过用户点击button获取formId发送消息, 使用事件冒泡机制获取多个formId解决消息模版限制.
