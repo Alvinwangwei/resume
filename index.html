@@ -29,7 +29,7 @@
                   </li> 
                   <li>
                       <label class="left-label" >年龄</label>
-                      <span class="label-value" >29岁</span>
+                      <span class="label-value" >30岁</span>
                   </li> 
                   <li>
                       <label class="left-label" >学历</label>
@@ -54,7 +54,7 @@
                       <progress value="85" max="100"></progress> 
                   </li> 
                   <li>
-                    <label class="left-label">中后台系统开发</label>
+                    <label class="left-label">业务系统开发</label>
                     <progress value="85" max="100"></progress> 
                   </li>
                   <li>
@@ -62,7 +62,7 @@
                     <progress value="80" max="100"></progress> 
                   </li>  
                   <li> 
-                      <label class="left-label">微信小程序开发</label>
+                      <label class="left-label">小程序/h5开发</label>
                       <progress value="75" max="100"></progress>
                   </li>
               </ul> 
@@ -83,22 +83,25 @@
                   <li>
                     <label class="left-label" >构建工具</label>
                     <span class="label-value" >
-                      Webpack<br/>
-                      Vite<br/>
+                      Webpack, Vite
+                    </span>
+                </li>
+                <li>
+                    <label class="left-label" >路由管理</label>
+                    <span class="label-value" >
+                        Vue-router
                     </span>
                 </li>
                 <li>
                   <label class="left-label" >状态管理</label>
                   <span class="label-value" >
-                    VueX<br/>
-                    Pinia<br/>
+                    VueX, Pinia
                   </span>
                 </li>
                 <li>
-                  <label class="left-label" >组件库</label>
+                  <label class="left-label" >UI组件库</label>
                   <span class="label-value" >
-                    Element UI<br/>
-                    Ant Design<br/>
+                    Element UI<br/>Ant Design<br/>
                   </span>
                 </li>
                 <li>
@@ -141,9 +144,10 @@
                         </h3>
                         <p>资深前端工程师</p>
                         <p class="duty">
-                            1. 负责自助分析/自助取数等BI应用开发, 通过可视化配置查询条件完成多维度数据查询和数据报表分析, 搭建系统查询性能统计以及异常告警, 提升系统性能和稳定性.<br/>
-                            2. 完成自助取数应用改版, 取数功能组件化, 提供高效获取数据的能力.<br/>
-                            3. 负责竞品分析系统, 通过我方商品与竟品数据分析, 提供商品价格竞争力分析.
+                            1. 主要负责自助分析/取数等BI系统开发, 基于元数据多维度数据分析, 以及大数据量的自定义查询和导出<br/>
+                            2. 参与数据引擎/运营治理等数据应用基础服务平台搭建, 基于Doris为业务方提供数据集管理以及查询平台, 运营治理支持自助式配置数据治理任务<br/>
+                            3. 负责AB实验配置平台开发, 支持以流量维度、站点维度按占比配置分配并生成实验对比报告<br/>
+                            4. 负责竞品分析系统开发, 通过我方商品与竟品数据分析, 提供商品价格竞争力分析.<br/>
                         </p>
                     </li>
                     <li>
@@ -189,33 +193,41 @@
                 <hr /> 
                 <ul class="experience-list">
                       <li>
-                        <h3>自助分析/自助取数应用</h3>
+                        <h3>自助分析/自助取数BI应用</h3>
                         <div class="listBox">
                             <p class="title">项目简介: </p>
                             <div class="intro">
-                              <!-- 分析图表可保存为看板, 并支持以iframe方式嵌入. -->
                                 该项目为公司自助式BI分析应用, 基于数仓的数据源, 形成多维分析、事件分析等分析模型, 选择维度、度量、过滤条件后进行数据查询, 查询结果数据可视化展示. 并实现了报表的权限管控. 同时自助取数支持通过编写SQL完成大数据量取数需求.
                             </div>
                             <div class="title techPointTitle">技术要点:</div>
                             <div class="techPoint">
-                                1. 分析元数据使用map对象存储, 可快速查找数据集、字段元数据. 使用Class类定义数据属性及其使用方法
                                 <!-- 分析模型 -->
+                                1. 分析元数据使用map对象存储, 可快速查找数据集、字段元数据. 使用Class类定义数据属性及其使用方法
                             </div>
                             <div class="techPoint">
-                                <!-- 行列权限 -->
-                                2. 使用mixins混入对象定义共用的变量和方法, 拓展父组件的对象与方法, 实现分析模块功能复用
-                            </div>
-                            <div class="techPoint">
-                                <!-- 可视化 -->
+                                <!-- 可视化模型 -->
                                 3. 基于Echarts封装常用的图表组件
                             </div>
                             <div class="techPoint">
-                                4. 使用iframe嵌入图表看板
+                                <!-- 权限模型 -->
+                                2. 使用mixins混入对象定义共用的变量和方法, 拓展父组件的对象与方法, 实现分析模块功能复用
+                            </div>
+                            <div class="techPoint">
+                                <!-- 渲染性能查询性能 -->
+                                5. 提升页面渲染性能, 搭建系统性能统计看板以及监控告警
+                            </div>
+                            <div class="techPoint">
+                                <!-- 组件化&模块化 -->
+                                6. 组件化
+                            </div>
+                            <div class="techPoint">
+                                <!-- 元数据管理 -->
+                                6. 元数据
                             </div>
                         </div>
                     </li>
                     <li>
-                        <h3>竞品分析系统</h3>
+                        <h3>AB实验平台/竞品分析系统/运营治理数据应用系统</h3>
                         <div class="listBox">
                             <p class="title">项目简介: </p>
                             <div class="intro">
@@ -223,48 +235,31 @@
                             </div>
                             <div class="title techPointTitle">技术要点:</div>
                             <div class="techPoint">
+                                <!-- 数据管理模型  -->
                                 1. 通过使用js2ts npm包支持快速将js语法转ts语法, 使用babel parser输出ast抽象语法树, 修改的语法后使用babel generate生成ts代码
                             </div>
                             <div class="techPoint">
+                                <!-- 页面组件设计 规则组件  -->
                                 2. 使用flex布局
                             </div>
                             <div class="techPoint">
+                                <!-- Vue架构  -->
                                 3. 基于Element ui table组件开发出支持通过配置项生成动态列以及自定义slot
                             </div>
                             <div class="techPoint">
+                                <!-- 错误&性能监控 -->
+                                5. 使用原生js开发导航插件, 通过cdn方式引用, 调用SDK方法, 集成导航菜单栏.
+                            </div>
+                            <div class="techPoint">
+                                <!-- 插件工具 js2ts header -->
                                 4. 使用自定义对象Event, 实现页面通信
                             </div>
                             <div class="techPoint">
+                                <!-- 配置化表单 -->
                                 5. 使用原生js开发导航插件, 通过cdn方式引用, 调用SDK方法, 集成导航菜单栏.
                             </div>
                         </div>
                     </li>
-                    <li style="display: none;">
-                        <h3>大数据门户</h3>
-                        <div class="listBox">
-                            <p class="title">项目简介: </p>
-                            <div class="intro">
-                                该项目做为数据应用对外呈现的平台, 可作为所有数据应用的入口,根据不同角色工作流提供对应的数据应用能力,
-                                以及统一顶部导航栏以及应用产品公告管理
-                            </div>
-                            <div class="title techPointTitle">技术要点:</div>
-                            <div class="techPoint">
-                                1. 使用class类， 面向对象
-                            </div>
-                            <div class="techPoint">
-                                2. vue3
-                            </div>
-                            <div class="techPoint">
-                                3. vite
-                            </div>
-                            <div class="techPoint">
-                                4. 插件开发
-                            </div>
-                            <div class="techPoint">
-                                5. 可配置化表单
-                            </div>
-                        </div>
-                    </li> 
                     <li>
                         <h3>可乐优品(h5, 小程序)</h3>
                         <div class="listBox">
@@ -439,6 +434,3 @@
     </div> 
 </body>
 </html>
-
-
-<script src="./static/js/proxy.js"></script>
